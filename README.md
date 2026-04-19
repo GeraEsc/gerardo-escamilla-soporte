@@ -152,7 +152,7 @@ Las tres tablas se diseñaron pensando en las relaciones reales del negocio: un 
 
 ---
 
-## Puntos Extra — Arquitectura de Microservicios
+## Arquitectura de Microservicios
 
 ### Separacion de servicios
 

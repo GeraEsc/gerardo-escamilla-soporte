@@ -1,0 +1,26 @@
+# Docker Compose para el Sistema de Soporte Tecnico
+# Servicio A: interfaz y rutas HTTP (puerto 5000 expuesto)
+# Servicio B: tarea pesada (sin puerto expuesto, solo accesible internamente)
+
+services:
+
+  servicio_a:
+    build: ./servicio_a
+    container_name: servicio_a
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - servicio_b
+
+  servicio_b:
+    build: ./servicio_b
+    container_name: servicio_b
+    # Sin seccion ports: solo es accesible internamente por servicio_a
+    environment:
+      - PYTHONUNBUFFERED=1

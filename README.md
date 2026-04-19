@@ -53,7 +53,7 @@ El problema es que Flask por defecto atiende una peticion a la vez. Si un usuari
 
 ---
 
-### Opcion 1 — Monolito
+### Monolito
 
 ```bash
 # 1. Clonar el repositorio
@@ -88,7 +88,7 @@ docker ps
 
 ---
 
-### Opcion 2 — Microservicios (puntos extra)
+### Microservicios 
 
 ```bash
 # 1. Clonar el repositorio (si no lo hiciste antes)
